@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Python environment files
+*.env
+.env
+*.local
+
+# Log and temp files
+*.log
+*.tmp
+*.bak
+
+# Zip archives / backups
+*.zip
+
+# GitHub Codespaces or cloud dev artifacts
+*.code-workspace
+*.code-search
+.code/
+
+# Don't ignore your config
+!greetings.yml

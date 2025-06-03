@@ -1,0 +1,28 @@
+name: Daily Slack Greeting
+
+on:
+  schedule:
+    - cron: "30 13 * * *"  # Runs daily at 9:30 AM Eastern (adjust as needed)
+  workflow_dispatch:  # allows manual run from the UI
+
+jobs:
+  send-greeting:
+    runs-on: ubuntu-latest
+    env:
+      DAVEBOT_SLACKHOOK: ${{ secrets.DAVEBOT_SLACKHOOK }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install holidays pyyaml requests
+
+      - name: Send Slack Greeting
+        run: python3 slack_greeting.py
+
