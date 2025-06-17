@@ -24,5 +24,5 @@ jobs:
         run: pip install holidays pyyaml requests
 
       - name: Send Slack Greeting
-        run: python3 slack_greeting.py
+        run: python3 davebot.py
 
